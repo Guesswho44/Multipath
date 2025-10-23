@@ -3,7 +3,7 @@
 AKUN="ACCOUNT SSH"
 TIMES="10"
 CHATID="1134227234"
-CHATIDGC="-1134227234"
+CHATIDGC="1134227234"
 KEY="8464448210:AAEl3CJ70zCiKC5UcN0t_RfGlKBJ8zS8RIw"
 URL="https://api.telegram.org/bot$KEY/sendMessage"
 ##################### END BOT TELE ###############
