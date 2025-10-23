@@ -4,7 +4,7 @@ biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
 #########################
 
 BURIQ () {
-    curl -sS https://raw.githubusercontent.com/shakboss/VIP-ScriptMultiPort/main/access > /root/tmp
+    curl -sS https://raw.githubusercontent.com/Guesswho44/Multipath/main/access > /root/tmp
     data=( `cat /root/tmp | grep -E "^### " | awk '{print $2}'` )
     for user in "${data[@]}"
     do
@@ -20,9 +20,9 @@ BURIQ () {
     done
     rm -f  /root/tmp
 }
-# https://raw.githubusercontent.com/shakboss/VIP-ScriptMultiPort/main/access 
+# https://raw.githubusercontent.com/Guesswho44/Multipath/main/access
 MYIP=$(curl -sS ipv4.icanhazip.com)
-Name=$(curl -sS https://raw.githubusercontent.com/shakboss/VIP-ScriptMultiPort/main/access | grep $MYIP | awk '{print $2}')
+Name=$(curl -sS https://raw.githubusercontent.com/Guesswho44/Multipath/main/access | grep $MYIP | awk '{print $2}')
 echo $Name > /usr/local/etc/.$Name.ini
 CekOne=$(cat /usr/local/etc/.$Name.ini)
 
@@ -39,7 +39,7 @@ fi
 
 PERMISSION () {
     MYIP=$(curl -sS ipv4.icanhazip.com)
-    IZIN=$(curl -sS https://raw.githubusercontent.com/shakboss/VIP-ScriptMultiPort/main/access | awk '{print $4}' | grep $MYIP)
+    IZIN=$(curl -sS https://raw.githubusercontent.com/Guesswho44/Multipath/main/access | awk '{print $4}' | grep $MYIP)
     if [ "$MYIP" = "$IZIN" ]; then
     Bloman
     else
@@ -133,7 +133,7 @@ fi
 fi
 
 echo ""
-wget -q https://raw.githubusercontent.com/shakboss/VIP-ScriptMultiPort/main/dependencies.sh;chmod +x dependencies.sh;./dependencies.sh
+wget -q https://raw.githubusercontent.com/Guesswho44/Multipath/main/dependencies.sh;chmod +x dependencies.sh;./dependencies.sh
 rm dependencies.sh
 clear
 apt install lolcat -y
@@ -153,9 +153,9 @@ sleep 2
 clear
 rm -rf slhostdns.sh
 
-wget https://raw.githubusercontent.com/shakboss/VIP-ScriptMultiPort/main/ssh/slhostdns.sh && chmod +x slhostdns.sh && ./slhostdns.sh
+wget https://raw.githubusercontent.com/Guesswho44/Multipath/main/ssh/slhostdns.sh && chmod +x slhostdns.sh && ./slhostdns.sh
 
-wget https://raw.githubusercontent.com/shakboss/VIP-ScriptMultiPort/main/ssh/install-sldns && chmod +x install-sldns && ./install-sldns
+wget https://raw.githubusercontent.com/Guesswho44/Multipath/main/ssh/install-sldns && chmod +x install-sldns && ./install-sldns
 elif test $dom -eq 2; then
 yellow "Add Domain for vmess/vless/trojan dll"
 echo " "
@@ -169,7 +169,7 @@ echo "$pp" > /etc/xray/domain
 echo "$pp" > /etc/xray/scdomain
 echo "IP=$pp" > /var/lib/alexxa-pro/ipvps.conf
 clear
-wget https://raw.githubusercontent.com/shakboss/VIP-ScriptMultiPort/main/ssh/install-sldns && chmod +x install-sldns && ./install-sldns
+wget https://raw.githubusercontent.com/Guesswho44/Multipath/main/ssh/install-sldns && chmod +x install-sldns && ./install-sldns
 else 
 echo "Not Found Argument"
 exit 1
@@ -226,7 +226,7 @@ EOF
 echo -e "$green[INFO]$NC Install SSH & OpenVPN!"
 sleep 2
 clear
-wget https://raw.githubusercontent.com/shakboss/VIP-ScriptMultiPort/main/ssh/ssh-vpn.sh && chmod +x ssh-vpn.sh && ./ssh-vpn.sh
+wget https://raw.githubusercontent.com/Guesswho44/Multipath/main/ssh/ssh-vpn.sh && chmod +x ssh-vpn.sh && ./ssh-vpn.sh
 sudo apt-get -y remove apache2
 sudo apt-get -y purge apache2
 #Instal Xray
@@ -337,7 +337,7 @@ systemctl daemon-reload
 systemctl restart stunnel4
 clear
 echo " "
-echo "====================-[ Ilyass Najhi VPN-STORE ]-===================="
+echo "====================-[ Zynet.Store VPN-STORE ]-===================="
 echo ""
 echo "------------------------------------------------------------"
 echo ""  | tee -a log-install.txt
@@ -379,7 +379,7 @@ echo "   - Script Presented By      : Ghafoor Ali" | tee -a log-install.txt
 echo "   - Contact (Only Text)      : t.me/ghafoorali" | tee -a log-install.txt
 echo "------------------------------------------------------------"
 echo "auto reboot after 10 seconds"
-echo "=============-[ Ilyass Najhi VPN-STORE ]-==============="
+echo "=============-[ Zynet VPN-STORE ]-==============="
 echo -e ""
 echo ""
 sleep 8
@@ -393,6 +393,6 @@ echo -e ""
 clear
 mkdir /etc/shakboss
 touch /etc/shakboss/hello
-echo 'script by ilyass najhi t.me/IlyassExE .. enjoy !' > /etc/shakboss/hello
+echo 'script by Zynet t.me/Zynet .. enjoy !' > /etc/shakboss/hello
 reboot
 fi
