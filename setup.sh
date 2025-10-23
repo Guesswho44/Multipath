@@ -233,7 +233,7 @@ sudo apt-get -y purge apache2
 echo -e "$green[INFO]$NC Install Install XRAY!"
 sleep 2
 clear
-wget https://raw.githubusercontent.com/shakboss/VIP-ScriptMultiPort/main/xray/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
+wget https://raw.githubusercontent.com/Guesswho44/Multipath/main/xray/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
 clear
 wget https://raw.githubusercontent.com/shakboss/VIP-ScriptMultiPort/main/backup/set-br.sh && chmod +x set-br.sh && ./set-br.sh
 clear
