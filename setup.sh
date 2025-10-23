@@ -118,7 +118,7 @@ mkdir -p /etc/alexxa/theme
 mkdir -p /var/lib/alexxa-pro >/dev/null 2>&1
 echo "IP=" >> /var/lib/alexxa-pro/ipvps.conf
 
-if [ -f "/etc/shakboss/hello" ]; then
+if [ -f "/etc/Zynet/hello" ]; then
 echo ""
 echo -e "[ ${green}INFO${NC} ] Script Already Installed"
 echo -ne "[ ${yell}WARNING${NC} ] Do you want to install again ? (y/n)? "
@@ -235,13 +235,13 @@ sleep 2
 clear
 wget https://raw.githubusercontent.com/Guesswho44/Multipath/main/xray/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
 clear
-wget https://raw.githubusercontent.com/shakboss/VIP-ScriptMultiPort/main/backup/set-br.sh && chmod +x set-br.sh && ./set-br.sh
+wget https://raw.githubusercontent.com/Zynet/VIP-ScriptMultiPort/main/backup/set-br.sh && chmod +x set-br.sh && ./set-br.sh
 clear
-wget https://raw.githubusercontent.com/shakboss/VIP-ScriptMultiPort/main/websocket/insshws.sh && chmod +x insshws.sh && ./insshws.sh
+wget https://raw.githubusercontent.com/Guesswho44/Multipath/main/websocket/insshws.sh && chmod +x insshws.sh && ./insshws.sh
 clear
 echo -e "$green[INFO]$NC Download Extra Menu"
 sleep 2
-wget https://raw.githubusercontent.com/shakboss/VIP-ScriptMultiPort/main/update/update.sh && chmod +x update.sh && ./update.sh
+wget https://raw.githubusercontent.com/Guesswho44/Multipath/main/update/update.sh && chmod +x update.sh && ./update.sh
 clear
 cat> /root/.profile << END
 # ~/.profile: executed by Bourne-compatible login shells.
@@ -268,7 +268,7 @@ if [ ! -f "/etc/log-create-user.log" ]; then
 echo "Log All Account " > /etc/log-create-user.log
 fi
 history -c
-serverV=$( curl -sS https://raw.githubusercontent.com/shakboss/VIP-ScriptMultiPort/main/version  )
+serverV=$( curl -sS https://raw.githubusercontent.com/Guesswho44/Multipath/main/version  )
 echo $serverV > /opt/.ver
 aureb=$(cat /home/re_otm)
 b=11
@@ -391,8 +391,8 @@ rm /root/update.sh
 secs_to_human "$(($(date +%s) - ${start}))" | tee -a log-install.txt
 echo -e ""
 clear
-mkdir /etc/shakboss
-touch /etc/shakboss/hello
-echo 'script by Zynet t.me/Zynet .. enjoy !' > /etc/shakboss/hello
+mkdir /etc/Zynet
+touch /etc/Zynet/hello
+echo 'script by Zynet t.me/Zynet .. enjoy !' > /etc/Zynet/hello
 reboot
 fi
